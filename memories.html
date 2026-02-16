@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Our Memories 🤍</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories 🤍</title>
 
 <style>
 body {
@@ -16,11 +16,18 @@ body {
     transition: opacity 1s ease;
 }
 
+h1 {
+    margin-bottom: 30px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
+    gap: 20px;
+}
+
+.photo-box {
+    text-align: center;
 }
 
 .gallery img {
@@ -34,14 +41,34 @@ body {
     transform: scale(1.05);
 }
 
+.caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #6a0dad;
+}
+
 .footer-text {
     margin-top: 40px;
     font-size: 1.2rem;
 }
 
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #6a0dad;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
 .heart {
     position: absolute;
-    color: #ff69b4;
     animation: floatUp 6s linear infinite;
     opacity: 0.7;
 }
@@ -58,20 +85,66 @@ body {
 <h1>Our Memories 📸💗</h1>
 
 <div class="gallery">
-    <img src="photo1.jpg">
-    <img src="photo2.jpg">
-    <img src="photo3.jpg">
-    <img src="photo4.jpg">
-    <img src="photo5.jpg">
-    <img src="photo6.jpg">
-    <img src="photo7.jpg">
-    <img src="photo8.jpg">
-    <img src="photo9.jpg">
-    <img src="photo10.jpg">
+
+    <div class="photo-box">
+        <img src="photo1.jpg">
+        <p class="caption">The day I can never forget (Our first meet)🥹🤍</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo2.jpg">
+        <p class="caption">One of my favourite pic with you 💗</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo3.jpg">
+        <p class="caption">My fav place with my fav person ❤️</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo4.jpg">
+        <p class="caption">This moment will  stay with me  forever ♾️ ✨</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo5.jpg">
+        <p class="caption">We looked so happy here 🫶🏻</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo6.jpg">
+        <p class="caption">My comfort person 🫂 
+My most favourite memory🥹💝</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo7.jpg">
+        <p class="caption">Smiles I’ll never forget 💓</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo8.jpg">
+        <p class="caption">Proof that we were inseparable😌 </p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo9.jpg">
+        <p class="caption">A little piece of our story📖</p>
+    </div>
+
+    <div class="photo-box">
+        <img src="photo10.jpg">
+        <p class="caption">The greatest chapter of our lives🥺🫂💗</p>
+    </div>
+
 </div>
 
 <div class="footer-text">
-    Here is the another year for making memories 🫂❤️‍🩹
+    Here is another year for making memories 🫂❤️‍🩹
+    <br><br>
+    <button onclick="window.location.href='sweet.html'">
+        Click here for some sweet message 💓
+    </button>
 </div>
 
 <script>
@@ -84,7 +157,7 @@ function createHearts() {
     setInterval(() => {
         const heart = document.createElement("div");
         heart.className = "heart";
-        heart.innerHTML = "🤍";
+        heart.innerHTML = "💗";
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.fontSize = (Math.random() * 20 + 15) + "px";
         heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
