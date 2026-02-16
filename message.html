@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>For You 🤍</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 🤍</title>
 
 <style>
 body {
@@ -21,21 +21,21 @@ h1 {
 }
 
 .message {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
     font-size: 1.2rem;
-    line-height: 1.8;
-    min-height: 120px;
+    line-height: 1.9;
+    min-height: 150px;
+    white-space: pre-line;
 }
 
 button {
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 12px 25px;
     border: none;
     border-radius: 30px;
     background-color: #6a0dad;
     color: white;
-    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
     display: none;
@@ -60,7 +60,7 @@ button:hover {
 
 <body>
 
-<h1>Happy Birthday to my most fav person🤍</h1>
+<h1>Happy Birthday Aravind 🤍💓🫂</h1>
 
 <div class="message" id="typedText"></div>
 
@@ -75,12 +75,25 @@ window.onload = () => {
     typeMessage();
 };
 
-const message = 
-`I truly believe that,We met because it was written in our destiny😇. Out of all the people in this world, somehow our paths crossed, and that will always feel magical to me.✨❤️
-I am the happiest person when I’m with you.💝 You’ve always been my safe place❤️‍🩹, my comfort,🫀 my home.🫂 You are my most favorite blessing, 🥹 my most favorite wish that came true 🫶🏻🫂,something I once hoped for without even knowing it would become this beautiful 😍♾️🫶🏻 
-We were so close, inseparable even..... And yes, life brought small misunderstandings that created a big distance between us.😫🥺 But even if we’re not as close as we used to be, you still hold the exact same place in my heart. That will never change. Some bonds are not measured by daily conversations, they are measured by the depth they leave in our souls💓
+const message = `I truly believe that,We met because it was written in our destiny 😇.
+Out of all the people in this world, somehow our paths crossed, and that will always feel magical to me ✨❤️
 
-On your birthday, I just want you to know that you are loved, appreciated, and cherished more than words can explain. I will always be grateful that destiny chose us to meet♾️🫶🏻🤍💝✨🫀🧿🫂
+I am the happiest person when I’m with you 💝
+You’ve always been my safe place ❤️‍🩹, my comfort 🫀, my home 🫂
+You are my most favorite blessing 🥹,
+my most favorite wish that came true 🫶🏻🫂,
+something I once hoped for without even knowing it would become this beautiful 😍♾️🫶🏻
+
+We were so close, inseparable even...
+And yes, life brought small misunderstandings that created a big distance between us 😫🥺
+But even if we’re not as close as we used to be, you still hold the exact same place in my heart.
+That will never change.🫂🫀
+Some bonds are not measured by daily conversations,
+they are measured by the depth they leave in our souls 💓
+
+On your birthday, I just want you to know that you are loved, appreciated, and cherished more than words can explain.
+I will always be grateful that destiny chose us to meet ♾️🫶🏻🤍💝✨🫀🧿🫂
+
 Happy Birthday Aravinduuuu 🤍✨`;
 
 let index = 0;
@@ -89,7 +102,7 @@ function typeMessage() {
     if (index < message.length) {
         document.getElementById("typedText").innerHTML += message.charAt(index);
         index++;
-        setTimeout(typeMessage, 40);
+        setTimeout(typeMessage, 30);
     } else {
         document.getElementById("memoryBtn").style.display = "inline-block";
     }
