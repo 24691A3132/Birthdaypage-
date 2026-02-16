@@ -11,7 +11,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
     padding: 40px 20px;
-    overflow: hidden;
+    overflow-x: hidden;
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -25,7 +25,6 @@ h1 {
     margin: auto;
     font-size: 1.2rem;
     line-height: 1.9;
-    min-height: 150px;
     white-space: pre-line;
 }
 
@@ -38,7 +37,6 @@ button {
     color: white;
     cursor: pointer;
     transition: 0.3s;
-    display: none;
 }
 
 button:hover {
@@ -60,11 +58,30 @@ button:hover {
 
 <body>
 
-<h1>Happy Birthday Aravind 🤍💓🫂</h1>
+<h1>Happy Birthday to my most fav person 🤍🫂</h1>
 
-<div class="message" id="typedText"></div>
+<div class="message">
+I truly believe that,We met because it was written in our destiny 😇.
+Out of all the people in this world, somehow our paths crossed and that will always feel magical to me ✨❤️
 
-<button id="memoryBtn" onclick="goToPage('memories.html')">
+I am the happiest person when I am with you 💝
+You have always been my safe place ❤️‍🩹, my comfort 🫀 and my home 🫂
+You are my most favorite blessing 🥹,my most favorite wish that came true 🫶🏻🫂,
+something I once hoped for without even knowing it would become this beautiful 😍♾️🫶🏻
+
+We were so close, inseparable even...And yes, life brought small misunderstandings that created a big distance between us 😫🥺
+But even if we’re not as close as we used to be, you still hold the exact same place in my heart.
+And that will never change.🫂🫀
+Some bonds are not measured by daily conversations,
+they are measured by the depth they leave in our souls 💓and ours is one of them.
+
+On your birthday, I just want you to know that you are loved and appreciated more than words can explain.
+I will always be grateful that destiny chose us to meet ♾️🫶🏻🤍💝✨🫀🧿🫂
+
+Happy Birthday Aravinduuuu 🤍✨
+</div>
+
+<button onclick="window.location.href='memories.html'">
     Click for the memories 📸💗
 </button>
 
@@ -72,48 +89,7 @@ button:hover {
 window.onload = () => {
     document.body.style.opacity = 1;
     createHearts();
-    typeMessage();
 };
-
-const message = `I truly believe that,We met because it was written in our destiny 😇.
-Out of all the people in this world, somehow our paths crossed, and that will always feel magical to me ✨❤️
-
-I am the happiest person when I’m with you 💝
-You’ve always been my safe place ❤️‍🩹, my comfort 🫀, my home 🫂
-You are my most favorite blessing 🥹,
-my most favorite wish that came true 🫶🏻🫂,
-something I once hoped for without even knowing it would become this beautiful 😍♾️🫶🏻
-
-We were so close, inseparable even...
-And yes, life brought small misunderstandings that created a big distance between us 😫🥺
-But even if we’re not as close as we used to be, you still hold the exact same place in my heart.
-That will never change.🫂🫀
-Some bonds are not measured by daily conversations,
-they are measured by the depth they leave in our souls 💓
-
-On your birthday, I just want you to know that you are loved, appreciated, and cherished more than words can explain.
-I will always be grateful that destiny chose us to meet ♾️🫶🏻🤍💝✨🫀🧿🫂
-
-Happy Birthday Aravinduuuu 🤍✨`;
-
-let index = 0;
-
-function typeMessage() {
-    if (index < message.length) {
-        document.getElementById("typedText").innerHTML += message.charAt(index);
-        index++;
-        setTimeout(typeMessage, 30);
-    } else {
-        document.getElementById("memoryBtn").style.display = "inline-block";
-    }
-}
-
-function goToPage(page) {
-    document.body.style.opacity = 0;
-    setTimeout(() => {
-        window.location.href = page;
-    }, 800);
-}
 
 function createHearts() {
     setInterval(() => {
