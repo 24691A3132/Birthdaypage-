@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    background-color: #ffd6e8;
+    color: #6a0dad;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.message {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    min-height: 120px;
+}
+
+button {
+    margin-top: 40px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    position: absolute;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-10vh); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy Birthday Aravind 🤍💓🫂</h1>
+
+<div class="message" id="typedText"></div>
+
+<button id="memoryBtn" onclick="goToPage('memories.html')">
+    Click for the memories 📸💗
+</button>
+
+<script>
+window.onload = () => {
+    document.body.style.opacity = 1;
+    createHearts();
+    typeMessage();
+};
+
+const message = 
+`You are my favourite blessing ❤️‍🩹
+
+I wish your day is filled with the love, laughter and everything you deserve ♾️💗
+
+Hope you achieve everything you dreamt for... 🫶🏻`;
+
+let index = 0;
+
+function typeMessage() {
+    if (index < message.length) {
+        document.getElementById("typedText").innerHTML += message.charAt(index);
+        index++;
+        setTimeout(typeMessage, 40);
+    } else {
+        document.getElementById("memoryBtn").style.display = "inline-block";
+    }
+}
+
+function goToPage(page) {
+    document.body.style.opacity = 0;
+    setTimeout(() => {
+        window.location.href = page;
+    }, 800);
+}
+
+function createHearts() {
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💗";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }, 500);
+}
+</script>
+
+</body>
+</html>

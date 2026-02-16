@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    background-color: #ffd6e8;
+    color: #6a0dad;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.container {
+    z-index: 2;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    color: #ff69b4;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-10vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Birthday!!!!! 🥳🤍</h1>
+    <button onclick="goToPage('message.html')">
+        Click here for the cute surprise 💗
+    </button>
+</div>
+
+<script>
+// Fade in
+window.onload = () => {
+    document.body.style.opacity = 1;
+    createHearts();
+};
+
+// Page transition
+function goToPage(page) {
+    document.body.style.opacity = 0;
+    setTimeout(() => {
+        window.location.href = page;
+    }, 800);
+}
+
+// Floating hearts generator
+function createHearts() {
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "🤍";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }, 500);
+}
+</script>
+
+</body>
+</html>
